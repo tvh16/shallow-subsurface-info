@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shallow Subsurface</title>
+</head>
+<body>
+    <h1>The Shallow Subsurface</h1>
+    <h2>How GEO-E supports</h2>
+    <div>
+        <h3>Tom van Haren</h3>
+        <p>R&D Geology - Unit EI</p>
+        <p>Email: <a href="mailto:tom.vanharen@vito.be">tom.vanharen@vito.be</a></p>
+        <p>Phone: <a href="tel:+3214335985">+32 14 33 59 85</a></p>
+    </div>
+    <div>
+        <h3>Katrijn Dirix</h3>
+        <p>R&D Geology - Unit EI</p>
+        <p>Email: <a href="mailto:katrijn.dirix@vito.be">katrijn.dirix@vito.be</a></p>
+        <p>Phone: <a href="tel:+3214335825">+32 14 33 58 25</a></p>
+    </div>
+    <div>
+        <p>More information: <a href="https://vitoresearch.sharepoint.com/:p:/s/unit-ei/EQSYERq_4HhLsAbDh_pVz0sBQlnkFCd7c8Mxgvm8Mhvqqw?e=DeN6i9">SharePoint Presentation</a></p>
+    </div>
+    <div>
+        <button onclick="shareViaWhatsApp()">Share via WhatsApp</button>
+        <button onclick="shareViaEmail()">Share via Email</button>
+    </div>
+    <script>
+        function shareViaWhatsApp() {
+            const url = window.location.href;
+            const text = "Check out this information: " + url;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        function shareViaEmail() {
+            const subject = "The Shallow Subsurface Information";
+            const body = `Check out this information:\n\n${window.location.href}`;
+            window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+        }
+    </script>
+</body>
+</html>
