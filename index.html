@@ -4,33 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shallow Subsurface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .contact {
+            margin-bottom: 20px;
+        }
+        .contact h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        .link {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .link a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .share-buttons {
+            text-align: center;
+        }
+        .share-buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>The Shallow Subsurface</h1>
-    <h2>How GEO-E supports</h2>
-    <div>
-        <h3>Tom van Haren</h3>
-        <p>R&D Geology - Unit EI</p>
-        <p>Email: <a href="mailto:tom.vanharen@vito.be">tom.vanharen@vito.be</a></p>
-        <p>Phone: <a href="tel:+3214335985">+32 14 33 59 85</a></p>
-    </div>
-    <div>
-        <h3>Katrijn Dirix</h3>
-        <p>R&D Geology - Unit EI</p>
-        <p>Email: <a href="mailto:katrijn.dirix@vito.be">katrijn.dirix@vito.be</a></p>
-        <p>Phone: <a href="tel:+3214335825">+32 14 33 58 25</a></p>
-    </div>
-    <div>
-        <p>More information: <a href="https://vitoresearch.sharepoint.com/:p:/s/unit-ei/EQSYERq_4HhLsAbDh_pVz0sBQlnkFCd7c8Mxgvm8Mhvqqw?e=DeN6i9">SharePoint Presentation</a></p>
-    </div>
-    <div>
-        <!-- Add image -->
-        <h3>Figures from the slide:</h3>
-        <img src="Capture.png" alt="Figure from slide">
-    </div>
-    <div>
-        <button onclick="shareViaWhatsApp()">Share via WhatsApp</button>
-        <button onclick="shareViaEmail()">Share via Email</button>
+    <div class="container">
+        <div class="title">The Shallow Subsurface</div>
+        <div class="subtitle">How GEO-E supports</div>
+        <div class="contact-info">
+            <div class="contact">
+                <h3>Tom van Haren</h3>
+                <p>R&D Geology - Unit EI</p>
+                <p>Email: <a href="mailto:tom.vanharen@vito.be">tom.vanharen@vito.be</a></p>
+                <p>Phone: <a href="tel:+3214335985">+32 14 33 59 85</a></p>
+            </div>
+            <div class="contact">
+                <h3>Katrijn Dirix</h3>
+                <p>R&D Geology - Unit EI</p>
+                <p>Email: <a href="mailto:katrijn.dirix@vito.be">katrijn.dirix@vito.be</a></p>
+                <p>Phone: <a href="tel:+3214335825">+32 14 33 58 25</a></p>
+            </div>
+        </div>
+        <div class="link">
+            <p>More information: <a href="https://vitoresearch.sharepoint.com/:p:/s/unit-ei/EQSYERq_4HhLsAbDh_pVz0sBQlnkFCd7c8Mxgvm8Mhvqqw?e=DeN6i9">SharePoint Presentation</a></p>
+        </div>
+        <div class="image-container">
+            <img src="Capture.png" alt="Figure from slide">
+        </div>
+        <div class="share-buttons">
+            <button onclick="shareViaWhatsApp()">Share via WhatsApp</button>
+            <button onclick="shareViaEmail()">Share via Email</button>
+        </div>
     </div>
     <script>
         function shareViaWhatsApp() {
